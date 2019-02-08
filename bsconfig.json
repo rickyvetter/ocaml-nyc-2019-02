@@ -1,7 +1,8 @@
 {
   "name": "reason-react-example",
   "bsc-flags": ["-bs-no-version-header", "-bs-super-errors"],
-  "reason": {"react-jsx" : 2},
+  "ppx-flags": [
+    "./ppx/reactjs_jsx_ppx_v3.exe"],
   "namespace": true,
   "bs-dependencies": [
     "reason-react",

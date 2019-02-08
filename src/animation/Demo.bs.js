@@ -8,8 +8,8 @@ var $$String = require("bs-platform/lib/js/string.js");
 var Pervasives = require("bs-platform/lib/js/pervasives.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 var Js_primitive = require("bs-platform/lib/js/js_primitive.js");
-var RemoteAction = require("./RemoteAction.bs.js");
-var SpringAnimation = require("./SpringAnimation.bs.js");
+var RemoteAction$ReasonReactExample = require("./RemoteAction.bs.js");
+var SpringAnimation$ReasonReactExample = require("./SpringAnimation.bs.js");
 
 var initial = /* record */[
   /* count1 */0,
@@ -368,11 +368,11 @@ function make$8(renderValue, _) {
               var arg$1 = state[/* target */2];
               Curry._1((function (param, param$1, param$2, param$3) {
                         return (function (param$4) {
-                            return SpringAnimation.setOnChange(param, param$1, param$2, param$3, arg, arg$1, param$4);
+                            return SpringAnimation$ReasonReactExample.setOnChange(param, param$1, param$2, param$3, arg, arg$1, param$4);
                           });
                       })(undefined, undefined, undefined, undefined), eta);
               return Curry._1(param[/* onUnmount */4], (function () {
-                            return SpringAnimation.stop(state[/* animation */0]);
+                            return SpringAnimation$ReasonReactExample.stop(state[/* animation */0]);
                           }));
             }),
           /* didUpdate */component$8[/* didUpdate */5],
@@ -390,7 +390,7 @@ function make$8(renderValue, _) {
             }),
           /* initialState */(function () {
               return /* record */[
-                      /* animation */SpringAnimation.create(0.0),
+                      /* animation */SpringAnimation$ReasonReactExample.create(0.0),
                       /* value */0.0,
                       /* target */1.0
                     ];
@@ -413,7 +413,7 @@ function make$8(renderValue, _) {
                             /* target */target
                           ],
                           (function () {
-                              return SpringAnimation.setFinalValue(target, state[/* animation */0]);
+                              return SpringAnimation$ReasonReactExample.setFinalValue(target, state[/* animation */0]);
                             })
                         ]);
               }
@@ -537,10 +537,10 @@ function make$11(remoteAction, $staropt$star, $staropt$star$1, $staropt$star$2, 
           /* handedOffState */component$11[/* handedOffState */2],
           /* willReceiveProps */component$11[/* willReceiveProps */3],
           /* didMount */(function (param) {
-              var token = RemoteAction.subscribe(param[/* send */3], remoteAction);
+              var token = RemoteAction$ReasonReactExample.subscribe(param[/* send */3], remoteAction);
               return Curry._1(param[/* onUnmount */4], (function () {
                             if (token !== undefined) {
-                              return RemoteAction.unsubscribe(Js_primitive.valFromOption(token));
+                              return RemoteAction$ReasonReactExample.unsubscribe(Js_primitive.valFromOption(token));
                             } else {
                               return /* () */0;
                             }
@@ -592,7 +592,7 @@ function shrinkText$1(text, value) {
   }
 }
 
-var remoteAction = RemoteAction.create(/* () */0);
+var remoteAction = RemoteAction$ReasonReactExample.create(/* () */0);
 
 function renderValue$2(value) {
   return ReasonReact.element(undefined, undefined, make$11(remoteAction, undefined, (function (text) {
@@ -616,7 +616,7 @@ function make$12() {
           /* render */(function () {
               return React.createElement("div", undefined, React.createElement("button", {
                               onClick: (function () {
-                                  return RemoteAction.send(remoteAction, /* Reset */0);
+                                  return RemoteAction$ReasonReactExample.send(remoteAction, /* Reset */0);
                                 })
                             }, "reset text"), React.createElement("div", undefined, "-----"), ReasonReact.element(undefined, undefined, make$8(renderValue$2, /* array */[])));
             }),
@@ -644,10 +644,10 @@ function make$13(remoteAction, _) {
           /* handedOffState */component$13[/* handedOffState */2],
           /* willReceiveProps */component$13[/* willReceiveProps */3],
           /* didMount */(function (param) {
-              var token = RemoteAction.subscribe(param[/* send */3], remoteAction);
+              var token = RemoteAction$ReasonReactExample.subscribe(param[/* send */3], remoteAction);
               return Curry._1(param[/* onUnmount */4], (function () {
                             if (token !== undefined) {
-                              return RemoteAction.unsubscribe(Js_primitive.valFromOption(token));
+                              return RemoteAction$ReasonReactExample.unsubscribe(Js_primitive.valFromOption(token));
                             } else {
                               return /* () */0;
                             }
@@ -725,12 +725,12 @@ function make$15() {
               var state = param[/* state */1];
               return React.createElement("div", undefined, React.createElement("button", {
                               onClick: (function () {
-                                  return RemoteAction.send(state, /* Incr */0);
+                                  return RemoteAction$ReasonReactExample.send(state, /* Incr */0);
                                 })
                             }, "in parent"), ReasonReact.element(undefined, undefined, make$14(state, /* array */[])));
             }),
           /* initialState */(function () {
-              return RemoteAction.create(/* () */0);
+              return RemoteAction$ReasonReactExample.create(/* () */0);
             }),
           /* retainedProps */component$15[/* retainedProps */11],
           /* reducer */(function (_, _$1) {

@@ -1,13 +1,10 @@
 'use strict';
 
-var Demo = require("./Demo.bs.js");
 var $$Array = require("bs-platform/lib/js/array.js");
 var Block = require("bs-platform/lib/js/block.js");
 var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
 var Random = require("bs-platform/lib/js/random.js");
-var Spring = require("./Spring.bs.js");
-var Animation = require("./Animation.bs.js");
 var Belt_List = require("bs-platform/lib/js/belt_List.js");
 var Belt_Array = require("bs-platform/lib/js/belt_Array.js");
 var Caml_array = require("bs-platform/lib/js/caml_array.js");
@@ -15,9 +12,12 @@ var Caml_int32 = require("bs-platform/lib/js/caml_int32.js");
 var Pervasives = require("bs-platform/lib/js/pervasives.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 var Js_primitive = require("bs-platform/lib/js/js_primitive.js");
-var RemoteAction = require("./RemoteAction.bs.js");
-var SpringAnimation = require("./SpringAnimation.bs.js");
 var Caml_builtin_exceptions = require("bs-platform/lib/js/caml_builtin_exceptions.js");
+var Demo$ReasonReactExample = require("./Demo.bs.js");
+var Spring$ReasonReactExample = require("./Spring.bs.js");
+var Animation$ReasonReactExample = require("./Animation.bs.js");
+var RemoteAction$ReasonReactExample = require("./RemoteAction.bs.js");
+var SpringAnimation$ReasonReactExample = require("./SpringAnimation.bs.js");
 
 function pxI(i) {
   return String(i) + "px";
@@ -134,7 +134,7 @@ function make($staropt$star, $staropt$star$1, _) {
                 return Curry._1(send, /* SetCursor */[cursor]);
               };
               Curry._2((function (param, param$1, param$2) {
-                        return Curry._5(SpringAnimation.setOnChange, param, param$1, 0.05, param$2, arg);
+                        return Curry._5(SpringAnimation$ReasonReactExample.setOnChange, param, param$1, 0.05, param$2, arg);
                       })(undefined, undefined, undefined), undefined, param[/* state */1][/* animation */0]);
               if (animateMount) {
                 return Curry._1(send, /* Click */0);
@@ -144,7 +144,7 @@ function make($staropt$star, $staropt$star$1, _) {
             }),
           /* didUpdate */component[/* didUpdate */5],
           /* willUnmount */(function (param) {
-              return SpringAnimation.stop(param[/* state */1][/* animation */0]);
+              return SpringAnimation$ReasonReactExample.stop(param[/* state */1][/* animation */0]);
             }),
           /* willUpdate */component[/* willUpdate */7],
           /* shouldUpdate */component[/* shouldUpdate */8],
@@ -161,7 +161,7 @@ function make($staropt$star, $staropt$star$1, _) {
             }),
           /* initialState */(function () {
               return /* record */[
-                      /* animation */SpringAnimation.create(initialImage),
+                      /* animation */SpringAnimation$ReasonReactExample.create(initialImage),
                       /* cursor */initialImage,
                       /* targetImage */initialImage
                     ];
@@ -183,7 +183,7 @@ function make($staropt$star, $staropt$star$1, _) {
                           ],
                           (function (param) {
                               var match = param[/* state */1];
-                              return SpringAnimation.setFinalValue(match[/* targetImage */2], match[/* animation */0]);
+                              return SpringAnimation$ReasonReactExample.setFinalValue(match[/* targetImage */2], match[/* animation */0]);
                             })
                         ]);
               }
@@ -237,7 +237,7 @@ function make$2($staropt$star, rAction, $staropt$star$1, onClose, _) {
           /* willReceiveProps */component$2[/* willReceiveProps */3],
           /* didMount */(function (param) {
               var send = param[/* send */3];
-              RemoteAction.subscribe(send, rAction);
+              RemoteAction$ReasonReactExample.subscribe(send, rAction);
               if (animateMount) {
                 return Curry._1(send, /* ToggleSize */3);
               } else {
@@ -246,7 +246,7 @@ function make$2($staropt$star, rAction, $staropt$star$1, onClose, _) {
             }),
           /* didUpdate */component$2[/* didUpdate */5],
           /* willUnmount */(function (param) {
-              return SpringAnimation.stop(param[/* state */1][/* animation */0]);
+              return SpringAnimation$ReasonReactExample.stop(param[/* state */1][/* animation */0]);
             }),
           /* willUpdate */component$2[/* willUpdate */7],
           /* shouldUpdate */component$2[/* shouldUpdate */8],
@@ -268,7 +268,7 @@ function make$2($staropt$star, rAction, $staropt$star$1, onClose, _) {
             }),
           /* initialState */(function () {
               return /* record */[
-                      /* animation */SpringAnimation.create(250),
+                      /* animation */SpringAnimation$ReasonReactExample.create(250),
                       /* width */250,
                       /* size : Small */0,
                       /* clickCount */0,
@@ -327,7 +327,7 @@ function make$2($staropt$star, rAction, $staropt$star$1, onClose, _) {
                                     var match$1 = match[/* size */2] === /* Small */0;
                                     var arg$1 = match$1 ? 250 : 450;
                                     var arg$2 = function (param, param$1, param$2) {
-                                      return Curry._6(SpringAnimation.setOnChange, param, param$1, 10, param$2, arg, arg$1);
+                                      return Curry._6(SpringAnimation$ReasonReactExample.setOnChange, param, param$1, 10, param$2, arg, arg$1);
                                     };
                                     return (function (eta) {
                                                 return Curry._1(arg$2(undefined, undefined, undefined), eta);
@@ -343,7 +343,7 @@ function make$2($staropt$star, rAction, $staropt$star$1, onClose, _) {
                                     };
                                     var arg$2 = 50;
                                     return Curry._1((function (param) {
-                                                    return Curry._6(SpringAnimation.setOnChange, param, 0.3, 10, arg, arg$1, arg$2);
+                                                    return Curry._6(SpringAnimation$ReasonReactExample.setOnChange, param, 0.3, 10, arg, arg$1, arg$2);
                                                   })(undefined), param[/* state */1][/* animation */0]);
                                   })]);
                   
@@ -382,7 +382,7 @@ function make$3(rAction, targetHeight, children) {
           /* willReceiveProps */component$3[/* willReceiveProps */3],
           /* didMount */(function (param) {
               var send = param[/* send */3];
-              RemoteAction.subscribe(send, rAction);
+              RemoteAction$ReasonReactExample.subscribe(send, rAction);
               return Curry._1(send, /* Animate */Block.__(3, [
                             targetHeight,
                             undefined
@@ -390,7 +390,7 @@ function make$3(rAction, targetHeight, children) {
             }),
           /* didUpdate */component$3[/* didUpdate */5],
           /* willUnmount */(function (param) {
-              return SpringAnimation.stop(param[/* state */1][/* animation */1]);
+              return SpringAnimation$ReasonReactExample.stop(param[/* state */1][/* animation */1]);
             }),
           /* willUpdate */component$3[/* willUpdate */7],
           /* shouldUpdate */component$3[/* shouldUpdate */8],
@@ -405,7 +405,7 @@ function make$3(rAction, targetHeight, children) {
           /* initialState */(function () {
               return /* record */[
                       /* height */0,
-                      /* animation */SpringAnimation.create(0)
+                      /* animation */SpringAnimation$ReasonReactExample.create(0)
                     ];
             }),
           /* retainedProps */component$3[/* retainedProps */11],
@@ -450,7 +450,7 @@ function make$3(rAction, targetHeight, children) {
                                   };
                                   var arg$2 = finalValue;
                                   return Curry._1((function (param, param$1) {
-                                                  return Curry._6(SpringAnimation.setOnChange, param, param$1, 10, arg, arg$1, arg$2);
+                                                  return Curry._6(SpringAnimation$ReasonReactExample.setOnChange, param, param$1, 10, arg, arg$1, arg$2);
                                                 })(undefined, undefined), state[/* animation */1]);
                                 })]);
                 case 4 : 
@@ -475,7 +475,7 @@ function initial() {
           /* act */(function () {
               return /* () */0;
             }),
-          /* randomAnimation */Animation.create(/* () */0),
+          /* randomAnimation */Animation$ReasonReactExample.create(/* () */0),
           /* items : [] */0
         ];
 }
@@ -487,11 +487,11 @@ function getElements(param) {
 }
 
 function createButton(removeFromList, animateMount, number) {
-  var rActionButton = RemoteAction.create(/* () */0);
-  var rActionHeight = RemoteAction.create(/* () */0);
+  var rActionButton = RemoteAction$ReasonReactExample.create(/* () */0);
+  var rActionHeight = RemoteAction$ReasonReactExample.create(/* () */0);
   var key = gen(/* () */0);
   var onClose = function () {
-    return RemoteAction.send(rActionHeight, /* Close */Block.__(2, [(function () {
+    return RemoteAction$ReasonReactExample.send(rActionHeight, /* Close */Block.__(2, [(function () {
                       return Curry._1(removeFromList, rActionHeight);
                     })]));
   };
@@ -506,9 +506,9 @@ function createButton(removeFromList, animateMount, number) {
 
 function createImage(animateMount, number) {
   var key = gen(/* () */0);
-  var rActionButton = RemoteAction.create(/* () */0);
+  var rActionButton = RemoteAction$ReasonReactExample.create(/* () */0);
   var imageGalleryAnimation = ReasonReact.element(gen(/* () */0), undefined, make(number, animateMount, /* array */[]));
-  var rActionHeight = RemoteAction.create(/* () */0);
+  var rActionHeight = RemoteAction$ReasonReactExample.create(/* () */0);
   var element = ReasonReact.element(key, undefined, make$3(rActionHeight, 200, /* array */[imageGalleryAnimation]));
   return /* record */[
           /* element */element,
@@ -528,7 +528,7 @@ var State = /* module */[
 function runAll(action) {
   var performSideEffects = function (param) {
     return Belt_List.forEach(param[/* state */1][/* items */2], (function (param) {
-                  return RemoteAction.send(param[/* rActionButton */1], action);
+                  return RemoteAction$ReasonReactExample.send(param[/* rActionButton */1], action);
                 }));
   };
   return /* SideEffects */Block.__(1, [performSideEffects]);
@@ -581,11 +581,11 @@ function make$4(showAllButtons, _) {
                 return /* Continue */0;
               };
               Curry._1(send, /* SetAct */Block.__(0, [send]));
-              return Animation.setCallback(param[/* state */1][/* randomAnimation */1], callback);
+              return Animation$ReasonReactExample.setCallback(param[/* state */1][/* randomAnimation */1], callback);
             }),
           /* didUpdate */component$4[/* didUpdate */5],
           /* willUnmount */(function (param) {
-              return Animation.stop(param[/* state */1][/* randomAnimation */1]);
+              return Animation$ReasonReactExample.stop(param[/* state */1][/* randomAnimation */1]);
             }),
           /* willUpdate */component$4[/* willUpdate */7],
           /* shouldUpdate */component$4[/* shouldUpdate */8],
@@ -612,7 +612,7 @@ function make$4(showAllButtons, _) {
                 }
               };
               var hide = !showAllButtons;
-              var match = Animation.isActive(state[/* randomAnimation */1]);
+              var match = Animation$ReasonReactExample.isActive(state[/* randomAnimation */1]);
               return React.createElement("div", {
                           className: "componentBox"
                         }, React.createElement("div", {
@@ -638,8 +638,8 @@ function make$4(showAllButtons, _) {
                 switch (action) {
                   case 0 : 
                       var key = gen(/* () */0);
-                      var rActionButton = RemoteAction.create(/* () */0);
-                      var rActionHeight = RemoteAction.create(/* () */0);
+                      var rActionButton = RemoteAction$ReasonReactExample.create(/* () */0);
+                      var rActionHeight = RemoteAction$ReasonReactExample.create(/* () */0);
                       var element = ReasonReact.element(key, undefined, make$3(rActionHeight, 500, /* array */[ReasonReact.element(key, undefined, make$4(showAllButtons, /* array */[]))]));
                       var item = /* record */[
                         /* element */element,
@@ -675,7 +675,7 @@ function make$4(showAllButtons, _) {
                             return Curry._1(act, /* FilterOutItem */Block.__(4, [firstItemNotClosing[/* rActionHeight */2]]));
                           });
                         return /* SideEffects */Block.__(1, [(function () {
-                                      return RemoteAction.send(firstItemNotClosing[/* rActionHeight */2], /* BeginClosing */Block.__(1, [
+                                      return RemoteAction$ReasonReactExample.send(firstItemNotClosing[/* rActionHeight */2], /* BeginClosing */Block.__(1, [
                                                     onBeginClosing,
                                                     onClose
                                                   ]));
@@ -696,11 +696,11 @@ function make$4(showAllButtons, _) {
                                   })]);
                   case 7 : 
                       return /* SideEffects */Block.__(1, [(function () {
-                                    var match = Animation.isActive(randomAnimation);
+                                    var match = Animation$ReasonReactExample.isActive(randomAnimation);
                                     if (match) {
-                                      return Animation.stop(randomAnimation);
+                                      return Animation$ReasonReactExample.stop(randomAnimation);
                                     } else {
-                                      return Animation.start(randomAnimation);
+                                      return Animation$ReasonReactExample.start(randomAnimation);
                                     }
                                   })]);
                   
@@ -770,7 +770,7 @@ function make$4(showAllButtons, _) {
                       };
                       var iter = function () {
                         return Belt_List.forEach(items, (function (item) {
-                                      return RemoteAction.send(item[/* rActionHeight */2], /* Close */Block.__(2, [onClose$1]));
+                                      return RemoteAction$ReasonReactExample.send(item[/* rActionHeight */2], /* Close */Block.__(2, [onClose$1]));
                                     }));
                       };
                       return /* SideEffects */Block.__(1, [iter]);
@@ -800,7 +800,7 @@ function make$4(showAllButtons, _) {
                       };
                       var iter$1 = function () {
                         return Belt_List.forEach(items, (function (item) {
-                                      return RemoteAction.send(item[/* rActionHeight */2], /* Open */Block.__(0, [onClose$2]));
+                                      return RemoteAction$ReasonReactExample.send(item[/* rActionHeight */2], /* Open */Block.__(0, [onClose$2]));
                                     }));
                       };
                       return /* SideEffects */Block.__(1, [iter$1]);
@@ -828,7 +828,7 @@ function make$5(rAction, headNum, imageGallery, _) {
           /* handedOffState */component$5[/* handedOffState */2],
           /* willReceiveProps */component$5[/* willReceiveProps */3],
           /* didMount */(function (param) {
-              RemoteAction.subscribe(param[/* send */3], rAction);
+              RemoteAction$ReasonReactExample.subscribe(param[/* send */3], rAction);
               return /* () */0;
             }),
           /* didUpdate */component$5[/* didUpdate */5],
@@ -890,9 +890,9 @@ var ChatHead = /* module */[
 
 function createControl() {
   return /* record */[
-          /* rAction */RemoteAction.create(/* () */0),
-          /* animX */SpringAnimation.create(0),
-          /* animY */SpringAnimation.create(0)
+          /* rAction */RemoteAction$ReasonReactExample.create(/* () */0),
+          /* animX */SpringAnimation$ReasonReactExample.create(0),
+          /* animY */SpringAnimation$ReasonReactExample.create(0)
         ];
 }
 
@@ -911,11 +911,11 @@ function make$6(imageGallery, _) {
                       var setOnChange = function (isX, afterChange) {
                         var control = Caml_array.caml_array_get(controls, headNum);
                         var arg = function (v) {
-                          RemoteAction.send(control[/* rAction */0], isX ? /* MoveX */Block.__(0, [v]) : /* MoveY */Block.__(1, [v]));
+                          RemoteAction$ReasonReactExample.send(control[/* rAction */0], isX ? /* MoveX */Block.__(0, [v]) : /* MoveY */Block.__(1, [v]));
                           return Curry._1(afterChange, v);
                         };
                         var arg$1 = function (param, param$1) {
-                          return Curry._5(SpringAnimation.setOnChange, Spring.gentle, 2, param, param$1, arg);
+                          return Curry._5(SpringAnimation$ReasonReactExample.setOnChange, Spring$ReasonReactExample.gentle, 2, param, param$1, arg);
                         };
                         return (function (eta) {
                                     return Curry._2(arg$1(undefined, undefined), undefined, eta);
@@ -926,14 +926,14 @@ function make$6(imageGallery, _) {
                         if (isLastHead) {
                           return /* () */0;
                         } else {
-                          return SpringAnimation.setFinalValue(x, Caml_array.caml_array_get(controls, headNum + 1 | 0)[/* animX */1]);
+                          return SpringAnimation$ReasonReactExample.setFinalValue(x, Caml_array.caml_array_get(controls, headNum + 1 | 0)[/* animX */1]);
                         }
                       };
                       var afterChangeY = function (y) {
                         if (isLastHead) {
                           return /* () */0;
                         } else {
-                          return SpringAnimation.setFinalValue(y, Caml_array.caml_array_get(controls, headNum + 1 | 0)[/* animY */2]);
+                          return SpringAnimation$ReasonReactExample.setFinalValue(y, Caml_array.caml_array_get(controls, headNum + 1 | 0)[/* animY */2]);
                         }
                       };
                       setOnChange(true, afterChangeX);
@@ -942,8 +942,8 @@ function make$6(imageGallery, _) {
               var onMove = function (e) {
                 var x = e.pageX;
                 var y = e.pageY;
-                SpringAnimation.setFinalValue(x, Caml_array.caml_array_get(controls, 0)[/* animX */1]);
-                return SpringAnimation.setFinalValue(y, Caml_array.caml_array_get(controls, 0)[/* animY */2]);
+                SpringAnimation$ReasonReactExample.setFinalValue(x, Caml_array.caml_array_get(controls, 0)[/* animX */1]);
+                return SpringAnimation$ReasonReactExample.setFinalValue(y, Caml_array.caml_array_get(controls, 0)[/* animY */2]);
               };
               window.addEventListener("mousemove", onMove);
               window.addEventListener("touchmove", onMove);
@@ -952,8 +952,8 @@ function make$6(imageGallery, _) {
           /* didUpdate */component$6[/* didUpdate */5],
           /* willUnmount */(function (param) {
               return Belt_Array.forEach(param[/* state */1][/* controls */0], (function (param) {
-                            SpringAnimation.stop(param[/* animX */1]);
-                            return SpringAnimation.stop(param[/* animY */2]);
+                            SpringAnimation$ReasonReactExample.stop(param[/* animX */1]);
+                            return SpringAnimation$ReasonReactExample.stop(param[/* animY */2]);
                           }));
             }),
           /* willUpdate */component$6[/* willUpdate */7],
@@ -1141,16 +1141,16 @@ var GalleryContainer = /* module */[
 var component$10 = ReasonReact.statelessComponent("ComponentGallery");
 
 function make$10() {
-  var globalStateExample = ReasonReact.element(undefined, undefined, make$8("Global State Example", "", ReasonReact.element(undefined, undefined, Demo.GlobalStateExample[/* make */1](/* array */[]))));
-  var localStateExample = ReasonReact.element(undefined, undefined, make$8("Local State Example", "", ReasonReact.element(undefined, undefined, Demo.LocalStateExample[/* make */1](/* array */[]))));
-  var simpleTextInput = ReasonReact.element(undefined, undefined, make$8("Simple Text Input", "Edit the text field", ReasonReact.element(undefined, undefined, Demo.TextInput[/* make */2]((function (text) {
+  var globalStateExample = ReasonReact.element(undefined, undefined, make$8("Global State Example", "", ReasonReact.element(undefined, undefined, Demo$ReasonReactExample.GlobalStateExample[/* make */1](/* array */[]))));
+  var localStateExample = ReasonReact.element(undefined, undefined, make$8("Local State Example", "", ReasonReact.element(undefined, undefined, Demo$ReasonReactExample.LocalStateExample[/* make */1](/* array */[]))));
+  var simpleTextInput = ReasonReact.element(undefined, undefined, make$8("Simple Text Input", "Edit the text field", ReasonReact.element(undefined, undefined, Demo$ReasonReactExample.TextInput[/* make */2]((function (text) {
                       console.log("onChange:", text);
                       return /* () */0;
                     }), undefined, undefined, /* array */[]))));
-  var simpleSpring = ReasonReact.element(undefined, undefined, make$8("Simple Spring", "Click on target to toggle", ReasonReact.element(undefined, undefined, Demo.SimpleSpring[/* make */2](/* array */[]))));
-  var animatedTextInput = ReasonReact.element(undefined, undefined, make$8("Animated Text Input", "Edit text, or click on target to toggle animation", ReasonReact.element(undefined, undefined, Demo.AnimatedTextInput[/* make */3](/* array */[]))));
-  var animatedTextInputRemote = ReasonReact.element(undefined, undefined, make$8("Animated Text Input With Remote Actions", "Edit text, or click on target to toggle animation", ReasonReact.element(undefined, undefined, Demo.AnimatedTextInputRemote[/* make */4](/* array */[]))));
-  var callActionsOnGrandChild = ReasonReact.element(undefined, undefined, make$8("Call actions on grandchild directly", "", ReasonReact.element(undefined, undefined, Demo.Parent[/* make */1](/* array */[]))));
+  var simpleSpring = ReasonReact.element(undefined, undefined, make$8("Simple Spring", "Click on target to toggle", ReasonReact.element(undefined, undefined, Demo$ReasonReactExample.SimpleSpring[/* make */2](/* array */[]))));
+  var animatedTextInput = ReasonReact.element(undefined, undefined, make$8("Animated Text Input", "Edit text, or click on target to toggle animation", ReasonReact.element(undefined, undefined, Demo$ReasonReactExample.AnimatedTextInput[/* make */3](/* array */[]))));
+  var animatedTextInputRemote = ReasonReact.element(undefined, undefined, make$8("Animated Text Input With Remote Actions", "Edit text, or click on target to toggle animation", ReasonReact.element(undefined, undefined, Demo$ReasonReactExample.AnimatedTextInputRemote[/* make */4](/* array */[]))));
+  var callActionsOnGrandChild = ReasonReact.element(undefined, undefined, make$8("Call actions on grandchild directly", "", ReasonReact.element(undefined, undefined, Demo$ReasonReactExample.Parent[/* make */1](/* array */[]))));
   var chatHeads = ReasonReact.element(undefined, undefined, make$8("Chat Heads", "", ReasonReact.element(undefined, undefined, make$7(/* array */[]))));
   var imageGallery = ReasonReact.element(undefined, undefined, make$8("Image Gallery", " Click on the image to transition to the next one. ", ReasonReact.element(undefined, undefined, make(undefined, undefined, /* array */[]))));
   var reducerAnimation = ReasonReact.element(undefined, undefined, make$8("Animation Based On Reducers", "", ReasonReact.element(undefined, undefined, make$4(false, /* array */[]))));

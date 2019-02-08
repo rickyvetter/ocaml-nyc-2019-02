@@ -1,9 +1,9 @@
 'use strict';
 
 var React = require("react");
-var MyBannerRe = require("./MyBannerRe.bs.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 var Js_primitive = require("bs-platform/lib/js/js_primitive.js");
+var MyBannerRe$ReasonReactExample = require("./MyBannerRe.bs.js");
 
 var component = ReasonReact.statelessComponent("PageReason");
 
@@ -20,7 +20,7 @@ function make(message, extraGreeting, _) {
           /* shouldUpdate */component[/* shouldUpdate */8],
           /* render */(function () {
               var greeting = extraGreeting !== undefined ? extraGreeting : "How are you?";
-              return React.createElement("div", undefined, ReasonReact.element(undefined, undefined, MyBannerRe.make(true, message + (" " + greeting), /* array */[])));
+              return React.createElement("div", undefined, ReasonReact.element(undefined, undefined, MyBannerRe$ReasonReactExample.make(true, message + (" " + greeting), /* array */[])));
             }),
           /* initialState */component[/* initialState */10],
           /* retainedProps */component[/* retainedProps */11],

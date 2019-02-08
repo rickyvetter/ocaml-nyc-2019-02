@@ -5,12 +5,12 @@ var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
 var $$String = require("bs-platform/lib/js/string.js");
 var Caml_obj = require("bs-platform/lib/js/caml_obj.js");
-var TodoItem = require("./TodoItem.bs.js");
 var Belt_List = require("bs-platform/lib/js/belt_List.js");
 var Pervasives = require("bs-platform/lib/js/pervasives.js");
 var ReactDOMRe = require("reason-react/src/ReactDOMRe.js");
-var TodoFooter = require("./TodoFooter.bs.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var TodoItem$ReasonReactExample = require("./TodoItem.bs.js");
+var TodoFooter$ReasonReactExample = require("./TodoFooter.bs.js");
 
 var localStorageNamespace = "reason-react-todos";
 
@@ -74,7 +74,7 @@ function make() {
                     }));
               var todoItems = Belt_List.map(__x, (function (todo) {
                       var editing$1 = editing !== undefined ? editing === todo[/* id */0] : false;
-                      return ReasonReact.element(todo[/* id */0], undefined, TodoItem.make(todo, editing$1, (function () {
+                      return ReasonReact.element(todo[/* id */0], undefined, TodoItem$ReasonReactExample.make(todo, editing$1, (function () {
                                         return Curry._1(send, /* Destroy */Block.__(4, [todo]));
                                       }), (function (text) {
                                         return Curry._1(send, /* Save */Block.__(2, [
@@ -102,7 +102,7 @@ function make() {
                 footer = null;
               }
               if (exit === 1) {
-                footer = ReasonReact.element(undefined, undefined, TodoFooter.make(activeTodoCount, completedCount, state[/* nowShowing */0], (function () {
+                footer = ReasonReact.element(undefined, undefined, TodoFooter$ReasonReactExample.make(activeTodoCount, completedCount, state[/* nowShowing */0], (function () {
                             return Curry._1(send, /* ClearCompleted */2);
                           }), /* array */[]));
               }
