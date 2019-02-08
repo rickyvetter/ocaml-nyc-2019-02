@@ -1,3 +1,11 @@
+This repo contains a fork of [reason-react-example](https://github.com/reasonml-community/reason-react-example) with code snippets of hooks as well as my slides from the OCaml NYC Meetup in Feb. Feel free to play around and let me know if you run into any issues! The React and ppx PRs will be made soon to make it easier to try in your own projects!
+
+Code changes:
+src/hooks
+src/hooks-animation/HooksReanimate.re
+
+------------------------
+
 This is a repo with examples usages of [ReasonReact](https://github.com/reasonml/reason-react), whose docs are [here](https://reasonml.github.io/reason-react/).
 Have something you don't understand? Join us on [Discord](https://discord.gg/reasonml)!
 
